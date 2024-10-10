@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+    <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/templatemo-style.css" />
+    <style>
+      #bg_img_eq {
+          background-image: url(../img/bg_eq.png);
+          height: 640px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+      }
+    </style>
+    <title>EQ Pro Control Panel</title>
+  </head>
+<!--
+    Pro Control Panel
+    EQ
+-->
+  <body>
+    <div class="columns-bg">
+      <!-- Logo & Intro -->
+      <section id="logo" class="tm-section-logo tm-section-logo-short">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12 offset-sm-0 col-md-6 offset-md-6">
+              <div class="tm-site-name-container border-bottom-0">
+                <div class="tm-site-name-container-inner">
+                  <h1 class="tm-text-primary">
+                    Equalizer Control Panel
+                  </h1>
+                  <p class="tm-text-primary tm-site-description mb-0">
+                    Control Equalizer effect.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 1st Section, Full Width Image -->
+      <section class="tm-p-3-section-1">
+        <div class="container-fluid" id="bg_img_eq"></div>
+      </section>
+
+      <section id="section_3" class="tm-section-4">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="tm-section-text-container-7 tm-bg-dark-gray">
+                <h2 class="tm-section-title-mb tm-text-primary-bright">
+                  Equalizer Control Panel
+                </h2>
+                <hr
+                  class="tm-hr-mb tm-hr-primary-bright tm-section-underline ml-0"
+                  />
+                <p class="tm-p-mb">
+                  This effect adjusts the balance between different frequency components of an audio signal.
+                 </p>
+                 <h3 class="tm-section-title-mb tm-text-primary-bright">
+                   Equalizer
+                 </h3>
+
+                <p class="tm-p-mb">
+                  This controls Equalizer enable or disable.
+                </p>
+
+                <h3 class="tm-section-title-mb tm-text-primary-bright">
+                  Control bars
+                </h3>
+                <p class="tm-p-mb">
+                  These EQ control bars controls Equalizer's octave.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="outro">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <div class="tm-section-text-container-5 tm-text-white">
+                <p>
+                  Contact viplayer.app
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <div class="tm-section-text-container-6">
+                <!--
+                    <a class="tm-social-icon-container">
+                      <span class="tm-social-icon-container-inner">
+                        <i class="fab fa-facebook-f"></i>
+                      </span>
+                    </a>
+                    -->
+                    <a class="tm-social-icon-container" href="https://x.com/ViPlayerFX">
+                      <span class="tm-social-icon-container-inner">
+                        <i class="fab fa-twitter"></i>
+                      </span>
+                    </a>
+                    <a class="tm-social-icon-container" href="mailto:office@viplayer.app">
+                      <span class="tm-social-icon-container-inner">
+                        <i class="fab fa-trello"></i>
+                      </span>
+                    </a>
+
+                    <!--
+                        <a class="tm-social-icon-container">
+                          <span class="tm-social-icon-container-inner">
+                            <i class="fab fa-instagram"></i>
+                          </span>
+                        </a>
+                        <a class="tm-social-icon-container">
+                          <span class="tm-social-icon-container-inner">
+                            <i class="fab fa-google-plus-g"></i>
+                          </span>
+                        </a>
+                        -->
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <footer class="col-sm-12 col-md-6 offset-md-6 px-md-0">
+              <p class="tm-copyright-text mb-0 tm-text-primary">
+                Copyright &copy; 2014-2025 viplayer.app
+              </p>
+            </footer>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- /.columns-bg -->
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+      $(function() {
+        // Dynamically set the size of full width background image when browser resize
+        $(window).resize(function() {
+          const maxImgHeight = 640;
+          const minImgHeight = 450;
+          const maxContainerWidth = 1310;
+          const browserWidth = $(window).width();
+
+          let imgHeight = browserWidth * (maxImgHeight / maxContainerWidth);
+
+          if (imgHeight > maxImgHeight) {
+            imgHeight = maxImgHeight;
+          } else if (imgHeight < minImgHeight) {
+            imgHeight = minImgHeight;
+          }
+
+          $("#bg_img_eq").height(imgHeight);
+        });
+      });
+    </script>
+  </body>
+</html>
